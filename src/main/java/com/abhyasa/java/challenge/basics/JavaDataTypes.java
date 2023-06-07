@@ -52,7 +52,6 @@ public class JavaDataTypes {
 
         //type cast int
         short shortValue = ((short) intValue);
-
         //does not give error, goes in circular fashion to find equivalent byte value
         byte byteValue = ((byte) intValue);
         float floatValue = ((float) intValue);
@@ -61,8 +60,21 @@ public class JavaDataTypes {
         System.out.println("floatValue: " + floatValue);
         // long and double implicit type casting
 
+        String strValue = String.valueOf(intValue);
+        System.out.println("strValue: " + strValue);
         Integer integerWrapper = new Integer("1244");
         System.out.println("int wrapper value: "+ integerWrapper);
+    }
+
+    /**
+     * float data type
+     * size - 4byte - 32bits
+     * Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits **/
+    private void floatDataType() {
+        float floatValue = 12.0F;
+        System.out.println("float value: " + floatValue);
+        Float floatWrapper = new Float("12.3");
+        floatWrapper = Float.MAX_VALUE;
     }
 
     /**
@@ -73,6 +85,8 @@ public class JavaDataTypes {
         byteDataType();
         shortDataType();
         intDataType();
+        //long similar to int - size 8 bytes - range -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+
     }
     public static void main(String[] args) {
         JavaDataTypes javaDataTypes = new JavaDataTypes();
