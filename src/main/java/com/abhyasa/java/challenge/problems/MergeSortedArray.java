@@ -21,7 +21,7 @@ public class MergeSortedArray {
                 break;
             }
             if (nums1[x] > nums2[j]) {
-                for(int z=x+m; z>x; z--) {
+                for (int z=x+m; z>x; z--) {
                     nums1[z] = nums1[z-1];
                 }
                 nums1[x] = nums2[j];
